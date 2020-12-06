@@ -1,0 +1,3 @@
+include ':hmk'
+include ':app'
+rootProject.name = "HMK"
