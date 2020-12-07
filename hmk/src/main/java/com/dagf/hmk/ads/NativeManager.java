@@ -27,29 +27,37 @@ public class NativeManager {
     private Context c;
     private AdListenerHMK adListener;
     private AdVideoEvent adVideoEvent;
-    public NativeManager(){
+
+    public NativeManager() {
         this.c = HMKApplication.get();
     }
 
-    public NativeManager(AdListenerHMK ad, AdVideoEvent adVideoEvent){
+    public NativeManager(AdListenerHMK ad, AdVideoEvent adVideoEvent) {
         this.c = HMKApplication.get();
         this.adListener = ad;
         this.adVideoEvent = adVideoEvent;
     }
 
 
-
     private int getLayout(NativeType nativeType) {
 
-      if(nativeType == NativeType.SMALL){
-          return R.layout.native_small_template;
-      }else{
-          return R.layout.native_video_template;
-      }
+        if (nativeType == NativeType.SMALL) {
+            adId = c.getString(R.string.ad_id_native_small);
+            return R.layout.native_small_template;
+        } else {
+            if(nativeType == NativeType.IMAGE){
+                adId = c.getString(R.string.ad_id_native);
+            }else{
+                adId = c.getString(R.string.ad_id_native_video);
+            }
+            return R.layout.native_video_template;
+        }
 
 
     }
 
+
+    private String adId = "";
     public void showNativeIn(NativeHMKLayout nativeLayout, NativeType nativeType) {
 
         NativeAdLoader.Builder builder = new NativeAdLoader.Builder(c, c.getString(R.string.ad_id_native));

@@ -23,7 +23,7 @@ import com.huawei.hms.ads.splash.SplashView;
 
 public class SplashManager {
     // Ad display timeout interval, in milliseconds.
-    private static final int AD_TIMEOUT = 5000;
+    private static final int AD_TIMEOUT = 5500;
 
     // Ad display timeout message flag.
     private static final int MSG_AD_TIMEOUT = 1001;
