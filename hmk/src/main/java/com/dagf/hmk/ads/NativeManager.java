@@ -42,25 +42,31 @@ public class NativeManager {
     private int getLayout(NativeType nativeType) {
 
         if (nativeType == NativeType.SMALL) {
-            adId = c.getString(R.string.ad_id_native_small);
             return R.layout.native_small_template;
         } else {
-            if(nativeType == NativeType.IMAGE){
-                adId = c.getString(R.string.ad_id_native);
-            }else{
-                adId = c.getString(R.string.ad_id_native_video);
-            }
             return R.layout.native_video_template;
         }
 
 
     }
 
+    public String getAdId(NativeType nativeType){
+        String adId = "";
+        if (nativeType == NativeType.SMALL) {
+            return c.getString(R.string.ad_id_native_small);
+        } else {
+            if(nativeType == NativeType.IMAGE){
+                adId = c.getString(R.string.ad_id_native);
+            }else{
+                adId = c.getString(R.string.ad_id_native_video);
+            }
+            return adId;
+        }
+    }
 
-    private String adId = "";
     public void showNativeIn(NativeHMKLayout nativeLayout, NativeType nativeType) {
 
-        NativeAdLoader.Builder builder = new NativeAdLoader.Builder(c, adId);
+        NativeAdLoader.Builder builder = new NativeAdLoader.Builder(c, getAdId(nativeType));
 
         builder.setNativeAdLoadedListener(new NativeAd.NativeAdLoadedListener() {
             @Override
