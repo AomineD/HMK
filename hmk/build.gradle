@@ -41,4 +41,6 @@ dependencies {
 
     //NEWS
     implementation 'com.huawei.hms:push:5.0.4.302'
+    implementation 'com.huawei.hms:ads-lite:13.4.35.300'
+    implementation 'com.huawei.hms:ads-consent:3.4.35.300'
 }

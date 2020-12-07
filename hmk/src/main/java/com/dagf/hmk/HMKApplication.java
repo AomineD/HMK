@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.huawei.agconnect.config.AGConnectServicesConfig;
 import com.huawei.hms.aaid.HmsInstanceId;
+import com.huawei.hms.ads.HwAds;
 import com.huawei.hms.common.ApiException;
 
 public class HMKApplication extends Application {
@@ -29,11 +30,20 @@ public class HMKApplication extends Application {
         super.onCreate();
         preferences = getSharedPreferences("hmk", MODE_PRIVATE);
 
+
+        HwAds.init(this);
+
         if(!isTokenSaved()){
 getToken();
             Log.e(TAG, "getToken: initializing");
-            Toast.makeText(this, "INITIALIZING", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "INITIALIZING", Toast.LENGTH_SHORT).show();
         }
+        c = this;
+    }
+
+    private static Context c;
+    public static Context get(){
+        return c;
     }
 
     public void getToken() {
