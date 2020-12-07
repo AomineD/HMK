@@ -30,20 +30,23 @@ public class HMKApplication extends Application {
         preferences = getSharedPreferences("hmk", MODE_PRIVATE);
 
         if(!isTokenSaved()){
-//getToken();
+getToken();
             Log.e(TAG, "getToken: initializing");
             Toast.makeText(this, "INITIALIZING", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public static void getToken(Context context) {
+    public void getToken() {
+        if(isTokenSaved()){
+            return;
+        }
         new Thread() {
             @Override
             public void run() {
                 try {
                     // read from agconnect-services.json
-                    String appId = AGConnectServicesConfig.fromContext(context).getString("client/app_id");
-                    String token = HmsInstanceId.getInstance(context).getToken(appId, "HCM");
+                    String appId = AGConnectServicesConfig.fromContext(getApplicationContext()).getString("client/app_id");
+                    String token = HmsInstanceId.getInstance(getApplicationContext()).getToken(appId, "HCM");
                     Log.e(TAG, "get token:" + token);
                //     Toast.makeText(HMKApplication.this, "SI BIEN!!!", Toast.LENGTH_SHORT).show();
                     // showLog("get token:" + token);
