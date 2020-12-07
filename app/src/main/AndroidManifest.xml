@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hmk">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.dagf.hmk">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HMK">
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.HMK"
+        tools:replace="android:name">
+
+
+        <activity android:name="com.dagf.hmk.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

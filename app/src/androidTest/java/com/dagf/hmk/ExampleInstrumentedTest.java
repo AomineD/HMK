@@ -1,4 +1,4 @@
-package com.example.hmk;
+package com.dagf.hmk;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.hmk", appContext.getPackageName());
+        assertEquals("com.dagf.hmk", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.hmk;
+package com.dagf.hmk;
 
 import androidx.appcompat.app.AppCompatActivity;
 
