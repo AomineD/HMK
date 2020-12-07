@@ -60,7 +60,7 @@ public class NativeManager {
     private String adId = "";
     public void showNativeIn(NativeHMKLayout nativeLayout, NativeType nativeType) {
 
-        NativeAdLoader.Builder builder = new NativeAdLoader.Builder(c, c.getString(R.string.ad_id_native));
+        NativeAdLoader.Builder builder = new NativeAdLoader.Builder(c, adId);
 
         builder.setNativeAdLoadedListener(new NativeAd.NativeAdLoadedListener() {
             @Override
