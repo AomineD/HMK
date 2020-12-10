@@ -40,7 +40,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //NEWS
+    implementation 'com.huawei.agconnect:agconnect-core:1.4.2.301'
+    implementation 'com.huawei.agconnect:agconnect-crash:1.4.2.301'
     implementation 'com.huawei.hms:push:5.0.4.302'
     implementation 'com.huawei.hms:ads-lite:13.4.35.300'
     implementation 'com.huawei.hms:ads-consent:3.4.35.300'
+    implementation 'com.huawei.hms:hianalytics:5.0.5.300'
 }

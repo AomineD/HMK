@@ -7,8 +7,12 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.huawei.agconnect.config.AGConnectServicesConfig;
+import com.huawei.agconnect.crash.AGConnectCrash;
 import com.huawei.hms.aaid.HmsInstanceId;
 import com.huawei.hms.ads.HwAds;
+import com.huawei.hms.analytics.HiAnalytics;
+import com.huawei.hms.analytics.HiAnalyticsInstance;
+import com.huawei.hms.analytics.HiAnalyticsTools;
 import com.huawei.hms.common.ApiException;
 
 public class HMKApplication extends Application {
@@ -30,6 +34,15 @@ public class HMKApplication extends Application {
         super.onCreate();
         preferences = getSharedPreferences("hmk", MODE_PRIVATE);
 
+        AGConnectCrash.getInstance().enableCrashCollection(true);
+      //  AGConnectCrash.getInstance().testIt(this);
+        // Initiate Analytics Kit
+        // Enable Analytics Kit Log
+        HiAnalyticsTools.enableLog();
+
+        // Generate the Analytics Instance
+        HiAnalyticsInstance instance = HiAnalytics.getInstance(this);
+        instance.setAnalyticsEnabled(true);
 
         HwAds.init(this);
 
