@@ -29,27 +29,31 @@ public class HMKApplication extends Application {
 
     public static SharedPreferences preferences;
 
+    public static boolean isHuaweiApp = true;
+
     @Override
     public void onCreate() {
         super.onCreate();
-        preferences = getSharedPreferences("hmk", MODE_PRIVATE);
+        if(isHuaweiApp) {
+            preferences = getSharedPreferences("hmk", MODE_PRIVATE);
 
-        AGConnectCrash.getInstance().enableCrashCollection(true);
-      //  AGConnectCrash.getInstance().testIt(this);
-        // Initiate Analytics Kit
-        // Enable Analytics Kit Log
-        HiAnalyticsTools.enableLog();
+            AGConnectCrash.getInstance().enableCrashCollection(true);
+            //  AGConnectCrash.getInstance().testIt(this);
+            // Initiate Analytics Kit
+            // Enable Analytics Kit Log
+            HiAnalyticsTools.enableLog();
 
-        // Generate the Analytics Instance
-        HiAnalyticsInstance instance = HiAnalytics.getInstance(this);
-        instance.setAnalyticsEnabled(true);
+            // Generate the Analytics Instance
+            HiAnalyticsInstance instance = HiAnalytics.getInstance(this);
+            instance.setAnalyticsEnabled(true);
 
-        HwAds.init(this);
+            HwAds.init(this);
 
-        if(!isTokenSaved()){
-getToken();
-            Log.e(TAG, "getToken: initializing");
+            if (!isTokenSaved()) {
+                getToken();
+                Log.e(TAG, "getToken: initializing");
 //            Toast.makeText(this, "INITIALIZING", Toast.LENGTH_SHORT).show();
+            }
         }
         c = this;
     }

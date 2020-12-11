@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="doyoulike">Te gusta</string>
+    <string name="rate_info">Disfrutas de nuestra app? Calificala para mejorarla aun más</string>
+    <string name="more_later">Luego</string>
+    <string name="rate_btn">Calificar</string>
+    <string name="never_rate">Nunca</string>
+    <string name="positive_comment">Gracias vamos a ello!!</string>
+    <string name="negative_comment">Oh perdona, como podemos mejorarla?</string>
+    <string name="send_mail">Enviar email al desarrollador</string>
+</resources>

@@ -46,4 +46,7 @@ dependencies {
     implementation 'com.huawei.hms:ads-lite:13.4.35.300'
     implementation 'com.huawei.hms:ads-consent:3.4.35.300'
     implementation 'com.huawei.hms:hianalytics:5.0.5.300'
+
+
+    implementation 'com.airbnb.android:lottie:3.5.0'
 }

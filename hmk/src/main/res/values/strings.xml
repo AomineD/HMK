@@ -25,4 +25,14 @@
     <string name="media_name">HUAWEI Ads</string>
     <string name="copyright_info">Copyright 2020. Huawei Technologies Co., Ltd</string>
 
+
+    <string name="doyoulike">Do you like</string>
+    <string name="rate_info">Are you enjoy our app? Rate our app in the store to improve more</string>
+    <string name="more_later">Later</string>
+    <string name="rate_btn">Submit</string>
+    <string name="never_rate">Never</string>
+    <string name="positive_comment">Thanks!!</string>
+    <string name="negative_comment">Oh sorry, tell us what going bad?</string>
+    <string name="send_mail">Send email to admins</string>
+
 </resources>

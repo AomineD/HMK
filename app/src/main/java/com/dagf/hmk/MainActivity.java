@@ -12,6 +12,7 @@ import com.dagf.hmk.ads.NativeHMKLayout;
 import com.dagf.hmk.utils.AdListenerHMK;
 import com.dagf.hmk.utils.AdSizeBanner;
 import com.dagf.hmk.utils.NativeType;
+import com.dagf.hmk.utils.RatingDialogHMK;
 import com.dagf.hmk.utils.SplashAdListener;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        RatingDialogHMK ratingDialogHMK = new RatingDialogHMK(this, "appmarket://details?id=com.zhiliaoapp.musically", "wineberryof@gmail.com");
+
+        ratingDialogHMK.frecuency_rating = 2;
+
+        ratingDialogHMK.showRating();
+
   /*
   findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
       @Override
