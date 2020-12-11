@@ -129,11 +129,7 @@ configButtons();
     send_email.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent sendto = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+emaildev));
-            sendto.putExtra(Intent.EXTRA_SUBJECT, "Contactar con el soporte de "+getString(R.string.app_name));
-            sendto.putExtra(Intent.EXTRA_TEXT, "Hola, quisiera que mejorarán...");
-            startActivity(sendto);
-            dismiss();
+    sendEmail();
         }
     });
 
@@ -158,6 +154,25 @@ configButtons();
         }, 2000);
     }
 
+    }
+
+    private void sendEmail(){
+        Intent selectorIntent = new Intent(Intent.ACTION_SENDTO);
+        selectorIntent.setData(Uri.parse("mailto:"));
+
+        String subject = "Contactar con el soporte de "+getString(R.string.app_name);
+        String text = "Hola, quisiera que mejorarán...";
+        final Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, emaildev);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, text);
+        emailIntent.setSelector(selectorIntent);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Choose one..."));
+        } catch (android.content.ActivityNotFoundException e) {
+         //   Toast.makeText(context, context.getString(R.string.share_no_intent_handler_found), Toast.LENGTH_SHORT).show();
+        }
     }
 }
 

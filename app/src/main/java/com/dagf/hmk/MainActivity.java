@@ -89,5 +89,6 @@ HMK.showSplashAd(this, new SplashAdListener(){
 
         HMK.showNativeIn(lay1, NativeType.IMAGE);
         HMK.showNativeIn(lay2, NativeType.SMALL);*/
+        //Toast.makeText(this, "se fue", Toast.LENGTH_SHORT).show();
     }
 }
