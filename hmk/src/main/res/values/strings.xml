@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="banner_ad_id">testw6vs28auh3</string>
+    <string name="banner_ad_id" translatable="false">testw6vs28auh3</string>
 
     <!-- NATIVE -->
 
-    <string name="ad_id_native">testu7m3hc4gvm</string>
-    <string name="ad_id_native_small">testb65czjivt9</string>
-    <string name="ad_id_native_video">testy63txaom86</string>
+    <string name="ad_id_native" translatable="false">testu7m3hc4gvm</string>
+    <string name="ad_id_native_small" translatable="false">testb65czjivt9</string>
+    <string name="ad_id_native_video" translatable="false">testy63txaom86</string>
 
 
     <!--Interstitial ad-->
-    <string name="image_ad_id">teste9ih9j0rc3</string>
-    <string name="video_ad_id">testb4znbuh3n2</string>
-    <string name="interstitial_ad">testb4znbuh3n2</string>
+    <string name="image_ad_id" translatable="false">teste9ih9j0rc3</string>
+    <string name="video_ad_id" translatable="false">testb4znbuh3n2</string>
+    <string name="interstitial_ad" translatable="false">testb4znbuh3n2</string>
 
     <string name="ad_flag">Ad</string>
 
     <!-- SPLASH AD -->
-    <string name="ad_id_splash">testd7c5cewoj6</string>
-    <string name="ad_id_splash_landscape">testq6zq98hecj</string>
+    <string name="ad_id_splash" translatable="false">testd7c5cewoj6</string>
+    <string name="ad_id_splash_landscape" translatable="false">testq6zq98hecj</string>
 
-    <string name="title_splash_app">HUAWEI app</string>
-    <string name="media_name">HUAWEI Ads</string>
-    <string name="copyright_info">Copyright 2020. Huawei Technologies Co., Ltd</string>
+    <string name="title_splash_app" translatable="false">HUAWEI app</string>
+    <string name="media_name" translatable="false">HUAWEI Ads</string>
+    <string name="copyright_info" translatable="false">Copyright 2020. Huawei Technologies Co., Ltd</string>
 
 
     <string name="doyoulike">Do you like</string>
