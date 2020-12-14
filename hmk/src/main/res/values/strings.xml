@@ -15,7 +15,7 @@
     <string name="video_ad_id" translatable="false">testb4znbuh3n2</string>
     <string name="interstitial_ad" translatable="false">testb4znbuh3n2</string>
 
-    <string name="ad_flag">Ad</string>
+    <string name="ad_flag" translatable="false">Ad</string>
 
     <!-- SPLASH AD -->
     <string name="ad_id_splash" translatable="false">testd7c5cewoj6</string>
@@ -35,4 +35,5 @@
     <string name="negative_comment">Oh sorry, tell us what going bad?</string>
     <string name="send_mail">Send email to admins</string>
 
+    <bool name="huawei__app">false</bool>
 </resources>

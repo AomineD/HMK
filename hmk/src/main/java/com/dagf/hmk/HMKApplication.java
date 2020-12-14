@@ -29,12 +29,11 @@ public class HMKApplication extends Application {
 
     public static SharedPreferences preferences;
 
-    public static boolean isHuaweiApp = true;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        if(isHuaweiApp) {
+        if(getResources().getBoolean(R.bool.huawei__app)) {
             preferences = getSharedPreferences("hmk", MODE_PRIVATE);
 
             AGConnectCrash.getInstance().enableCrashCollection(true);
